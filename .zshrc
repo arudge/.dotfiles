@@ -1,6 +1,6 @@
 # Customize to your needs...
 export PATH=/usr/local/bin:/Users/arudge/.rvm/bin:/usr/local/share/npm/bin/:$PATH
-source "$HOME/.antigen/antigen.zsh"
+source "$HOME/.dotfiles/antigen/antigen.zsh"
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
