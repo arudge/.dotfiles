@@ -1,0 +1,45 @@
+[user]
+  name = Andy Rudge
+	email = arudge@bloomhealthco.com
+
+[credential]
+	helper = osxkeychain
+
+[merge]
+  tool = deltawalker
+
+[mergetool  "deltawalker"]
+  cmd = '/Applications/DeltaWalker.app/Contents/MacOS/git-merge' "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
+
+[mergetool]
+	keepBackup = false
+
+[alias]
+  co = checkout  
+  up = smart-pull
+  gm = smart-merge
+  gl = smart-log  
+  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset' 
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+
+[apply]
+  whitespace = nowarn
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+
+[help]
+  autocorrect = 1
+
+[status]
+  submodule = 1
+
+[push]  
+  default = current  
+
+[core]
+	#editor = subl -n -w
+  editor = vim --noplugin

@@ -1,0 +1,11 @@
+alias amend="git commit --amend"
+alias g=git
+alias git=hub
+alias gccp='grails clean && grails compile && grails package'
+alias gcst="gradle clean shadow test"
+alias gta='grails test-app'
+alias l="ls -lrthGsa"
+alias rabbitstart='sudo rabbitmq-server'
+alias redisstart='redis-server /usr/local/etc/redis.conf'
+alias remote='git remote -v'
+alias t=todo.sh

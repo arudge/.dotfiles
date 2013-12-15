@@ -1,0 +1,22 @@
+function jdk6 {
+    export JAVA_HOME=$JAVA6_HOME
+    set_path
+    echo "Using Java 6 $JAVA_HOME"
+}
+ 
+function jdk7 {
+    export JAVA_HOME=$JAVA7_HOME
+    set_path
+    echo "Using Java 7 $JAVA_HOME"
+}
+ 
+function set_path {
+    PATH=$PATH:$JAVA_HOME/bin
+    # Reload GVM
+    #source "/Users/arudge/.gvm/bin/gvm-init.sh"
+}
+
+# Allows commit message without typing quotes (can't have quotes in the commit msg though).
+function gc {
+  git commit -m "$*"
+}
