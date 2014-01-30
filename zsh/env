@@ -2,7 +2,7 @@ export JAVA6_HOME=`/usr/libexec/java_home -v 1.6.0`
 export JAVA7_HOME=`/usr/libexec/java_home -v 1.7.0`
 export GRAILS_TEST_LOG_DIRECTORY='target/test-reports'
 export GRAILS_OPTS="-Xms1g -Xmx2g -XX:PermSize=128m -XX:MaxPermSize=1024m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -server -Duser.timezone=UTC"
-export GRADLE_OPTS="-Xms1g -Xmx2g -XX:PermSize=128m -XX:MaxPermSize=1024m"
-export JAVA_TOOL_OPTIONS="-Djava.awt.headless=true"
-export VAGRANTMANAGER_MEM=5096
-export VAGRANTMANAGER_CPU=4
+export GRADLE_OPTS="-Xms1g -Xmx2g -XX:PermSize=128m -XX:MaxPermSize=1024m -Dorg.gradle.daemon=true"
+#export JAVA_TOOL_OPTIONS="-Djava.awt.headless=true"
+#export VAGRANTMANAGER_MEM=5096
+#export VAGRANTMANAGER_CPU=4
