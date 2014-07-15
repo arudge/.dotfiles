@@ -8,7 +8,7 @@ antigen use oh-my-zsh
 # Bundles
 antigen bundle pip
 antigen bundle lein
-antigen bundle command-not-found
+#antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 #antigen bundle arialdomartini/oh-my-git
 antigen bundle git
