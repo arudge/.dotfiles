@@ -1,5 +1,5 @@
 # Customize to your needs...
-export PATH=/usr/local/bin:/Users/arudge/.rvm/bin:/usr/local/share/npm/bin/:$PATH
+export PATH=/usr/local/bin:$PATH
 source "$HOME/.dotfiles/antigen/antigen.zsh"
 
 # Load the oh-my-zsh's library.
@@ -20,7 +20,6 @@ antigen bundle brew
 #antigen bundle gradle
 #antigen bundle grails
 antigen bundle osx
-#antigen bundle redis-cli
 antigen bundle git-extras
 antigen bundle gnu-utils
 
@@ -60,5 +59,12 @@ source "$HOME/.dotfiles/zsh/aliases"
 source "$HOME/.dotfiles/zsh/functions"
 source "$HOME/.dotfiles/zsh/env"
 
+ [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-source "/Users/arudge/.gvm/bin/gvm-init.sh"
+source "/Users/z0019dg/.gvm/bin/gvm-init.sh"
+
+source ~/.nvm/nvm.sh
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

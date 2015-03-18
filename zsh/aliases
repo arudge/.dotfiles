@@ -9,3 +9,4 @@ alias rabbitstart='sudo rabbitmq-server'
 alias redisstart='redis-server /usr/local/etc/redis.conf'
 alias remote='git remote -v'
 alias t=todo.sh
+alias gl='git smart-log'

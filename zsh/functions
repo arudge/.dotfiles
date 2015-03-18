@@ -9,6 +9,12 @@ function jdk7 {
     set_path
     echo "Using Java 7 $JAVA_HOME"
 }
+
+function jdk8 {
+    export JAVA_HOME=$JAVA8_HOME
+    set_path
+    echo "Using Java 8 $JAVA_HOME"
+}
  
 function set_path {
     PATH=$PATH:$JAVA_HOME/bin
@@ -19,4 +25,23 @@ function set_path {
 # Allows commit message without typing quotes (can't have quotes in the commit msg though).
 function gc {
   git commit -m "$*"
+}
+
+#proxy on/off
+function proxyon {
+  LANID=z0019dg
+  printf "Password: "
+  read -s PASSWORD
+  echo
+  export http_proxy=http://$LANID:$PASSWORD@proxy-mdha.target.com:8080
+  export HTTP_PROXY=http://$LANID:$PASSWORD@proxy-mdha.target.com:8080
+  export https_proxy=http://$LANID:$PASSWORD@proxy-mdha.target.com:8080
+  export HTTPS_PROXY=http://$LANID:$PASSWORD@proxy-mdha.target.com:8080
+}
+
+ function proxyoff {
+  unset http_proxy
+  unset HTTP_PROXY
+  unset https_proxy
+  unset HTTPS_PROXY
 }
