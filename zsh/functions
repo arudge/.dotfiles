@@ -26,22 +26,3 @@ function set_path {
 function gc {
   git commit -m "$*"
 }
-
-#proxy on/off
-function proxyon {
-  LANID=z0019dg
-  printf "Password: "
-  read -s PASSWORD
-  echo
-  export http_proxy=http://$LANID:$PASSWORD@proxy-mdha.target.com:8080
-  export HTTP_PROXY=http://$LANID:$PASSWORD@proxy-mdha.target.com:8080
-  export https_proxy=http://$LANID:$PASSWORD@proxy-mdha.target.com:8080
-  export HTTPS_PROXY=http://$LANID:$PASSWORD@proxy-mdha.target.com:8080
-}
-
- function proxyoff {
-  unset http_proxy
-  unset HTTP_PROXY
-  unset https_proxy
-  unset HTTPS_PROXY
-}
